@@ -1,11 +1,10 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 /**
-*main  - main block
-*DDescription: Get a ranom number and print the number
-*if it is positive,negative, or zerp
-*return: 0
+*main - main function to generate a random number
+*
+*Return: 0 (success)
 */
 int main(void)
 {
