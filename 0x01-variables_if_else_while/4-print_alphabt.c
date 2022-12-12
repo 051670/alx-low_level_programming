@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-*main - returns alphabets both except e and q
-*Return: 0 (success)
+*main - main block
+*Description: get random number and check its
+*Return: 0
 */
 int main(void)
 {
