@@ -2,20 +2,19 @@
 #include <stdlib.h>
 /**
 *main - returns alphabets both except e and q
-*
 *Return: 0 (success)
 */
 int main(void)
 {
-	char ch = 'a';
+	char c = 'a';
 
-	while (ch <= 'Z')
+	while (c <= 'Z')
 	{
-		if (ch != 'e' && ch != 'q')
+		if (c != 'e' && c != 'q')
 		{
-			putchar(ch);
+			putchar(c);
 		}
-		ch++;
+		c++;
 	}
 	putchar('\n');
 	return (0);
