@@ -1,25 +1,24 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
-*main - main block
-*Description: get random number and check its
-*Return: 0
-*/
+  *main- Entry point
+  *
+  *Return: Always 0 (Success)
+  */
 int main(void)
 {
-	int a;
+	int x;
 
-	for (a = 0; a < 10; a++)
+	for (x = 48; x < 58; x++)
+
 	{
-		putchar(a + '0');
-
-		if (a < 9)
+		putchar(x);
+		if (x < 57)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(44);
+			putchar(32);
 		}
-
-		putchar('\n');
-		return (0);
 	}
+	putchar('\n');
+	return (0);
 }
+
