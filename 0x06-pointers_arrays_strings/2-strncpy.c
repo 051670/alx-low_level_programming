@@ -1,23 +1,19 @@
 /**
- * _strncat - concatenates two strings
- * @dest: pointer to the destination string
- * @src: pointer to the source string
- * @n: number of bytes to print
+ * _strncpy - copies a string up to n
+ * @dest: Destination of the pointer to the string
+ * @src: Source of the pointer to the string to copy
+ * @n: Number of bytes to copy.
+ * main - check the code
  * Return: Always 0.
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int i, j;
+	int i;
 
-	i = 0;
-	for (j = 0; dest[j] != '\0'; j++)
-		;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[j + i] = src[i];
-		i++;
-	}
+	for (i = 0; src[i] != '\0' && i < n; i++)
+		dest[i]	= src[i];
+	while (i < n)
+		dest[i++] = '\0';
 	return (dest);
 }
-
