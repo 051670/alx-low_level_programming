@@ -1,21 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 /**
-*main - main block
-*Description: get random number and check its
-*Return: 0
-*/
+ * main - Entry point
+ * Description: prints lowercase alphabets
+ * Return: Always 0 (success)
+ */
 int main(void)
 {
-	char c = 'a';
+	int ch;
 
-	while (c <= 'Z')
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		if (c != 'e' && c != 'q')
+		if (ch != 'e' && ch != 'q')
 		{
-			putchar(c);
+			putchar(ch);
 		}
-		c++;
+		else
+		{
+		}
 	}
 	putchar('\n');
 	return (0);
