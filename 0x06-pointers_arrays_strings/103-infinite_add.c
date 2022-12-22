@@ -1,4 +1,3 @@
-#include <main.h>
 #include <stdio.h>
 /**
  * infinite_add - Adds two numbers
@@ -13,10 +12,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, j, n, len1, len2; /* i = iterator, n = carry over number */
 
-	for (len1 = 0; n1[len1] != '\0'; len1++)
-		;
-	for (len2 = 0; n2[len2] != '\0'; len2++)
-		;
+	for (len1 = 0; n1[len1] != '\0'; len1++);
+
+	for (len2 = 0; n2[len2] != '\0'; len2++);
+
 	if (size_r >= len1 || size_r >= len2)
 		if (len1 >= len2)
 			i = j = len2 - 1;
