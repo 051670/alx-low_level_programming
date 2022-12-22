@@ -1,23 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
-*main - main block
-*Description:print ass single digit number of base 10
-*Return: 0
-*/
+  *main- Entry point
+  *
+  *Return: Always 0 (Success)
+  */
 int main(void)
 {
-	char ch;
+	int x;
+	char y;
 
-	for (ch = '0'; ch <= '0'; ch++)
+	for (x = 0; x < 16; x++)
 	{
-		putchar(ch);
+		if (x < 10)
+		{
+			putchar(x + 48);
+		}
+		else
+		{
+			y = 97 + x % 10;
+			putchar(y);
+		}
 	}
-	for (ch = 'a'; ch <= 'f'; ch++)
-	{
-		putchar(ch);
-	}
+
 	putchar('\n');
 	return (0);
 }
-
