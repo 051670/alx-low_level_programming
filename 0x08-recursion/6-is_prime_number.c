@@ -25,4 +25,3 @@ int is_prime_number(int n)
 {
 	return (checker(2, n));
 }
-
