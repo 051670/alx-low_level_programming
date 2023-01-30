@@ -1,22 +1,45 @@
+#include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * find_listint_loop - A function that finds the loop in a list
- * @head: A pointer to listint_t structure
- * Return: The address of the node where the loop start, or NULL
+ * free_listint_safe - A function that frees a list
+ * @h: A pointer listint_t structure
+ * Return: The size of the list that was free'd
  */
-listint_t *find_listint_loop(listint_t *head)
+size_t free_listint_safe(listint_t **h)
 {
-	listint_t *one = head, *two = head;
+	size_t counter = 0;
+	listint_t *temp;
 
-	while (one && two && two->next)
+	temp = *h;
+	while (temp)
 	{
-		one = one->next;
-		two = two->next->next;
-		if (one == two)
-		{
-			return (one);
-		}
+		temp = *h;
+		temp = temp->next;
+		free_list(temp);
+		counter++;
 	}
-	return (NULL);
+	*h = NULL;
+
+	return (counter);
+}
+
+/**
+ * free_list - A function that frees a listint_t recursively
+ * @head: A pointer to the listint_t structure
+ * Return: Nothing
+ */
+void free_list(listint_t *head)
+{
+	listint_t *temp;
+
+	if (head)
+	{
+		temp = head;
+		temp = temp->next;
+		free(temp);
+		free_list(temp);
+	}
+	free(head);
 }
